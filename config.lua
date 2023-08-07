@@ -113,6 +113,11 @@ Config = {
             { coords = vector4(380.24, -827.33, 29.29, 180.0), prop = false, }, -- vector4 to place the till and the way it faces
             { coords = vector4(375.55, -827.33, 29.29, 180.0), prop = false, }, -- "prop = true" spawns a prop at the coords
 		},
+		["realtor"] = { -- Player job role restriction
+            { coords = vector4(-703.36, 266.92, 83.05, 180.6), prop = true, }, -- vector4 to place the till and the way it faces
+            { coords = vector4(-706.78, 265.32, 83.04, 184.43), prop = true, }, -- "prop = true" spawns a prop at the coords
+			{ coords = vector4(-708.06, 271.38, 83.05, 9.19), prop = true, }, -- vector4 to place the till and the way it faces
+		},
 	},
 
 	-- The /polcharge command requires specific jobs to be set
