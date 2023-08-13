@@ -28,7 +28,7 @@ CreateThread(function()
 		if Config.BankBlips then
 			for _, v in pairs(Config.BankLocations) do
 				for _, b in pairs(v) do
-					makeBlip({coords = b, sprite = 108, col = 2, scale = 0.55, disp = 6, name = Loc[Config.Lan].blip["blip_bank"] })
+					makeBlip({coords = b, sprite = 108, col = 2, scale = 0.8, disp = 6, name = Loc[Config.Lan].blip["blip_bank"] })
 					break
 				end
 			end
