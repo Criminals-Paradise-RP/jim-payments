@@ -97,7 +97,7 @@ Config = {
 		['irishpub'] = { MinAmountforTicket = 5, PayPerTicket = 100, Commission = 0.20, },
 		['splitsides'] = { MinAmountforTicket = 5, PayPerTicket = 100, Commission = 0.20, },
 		['bahama'] = { MinAmountforTicket = 5, PayPerTicket = 100, Commission = 0.20, },
-		['mechanic'] = { MinAmountforTicket = 500, PayPerTicket = 500, Commission = 0.20, },
+		['mechanic'] = { MinAmountforTicket = 500, PayPerTicket = 500, Commission = 1.00, },
 		-- ['lostmc'] = { MinAmountforTicket = 5, PayPerTicket = 100, Commission = 0.10, gang = true, },  -- Example of a gang being supported
 		['yellowgang'] = { MinAmountforTicket = 5, PayPerTicket = 100, Commission = 0.10, gang = true, },
 		['mafiacrip'] = { MinAmountforTicket = 5, PayPerTicket = 100, Commission = 0.10, gang = true, },
