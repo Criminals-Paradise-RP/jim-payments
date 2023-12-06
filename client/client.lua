@@ -1,6 +1,3 @@
-local QBCore = exports['qb-core']:GetCoreObject()
-RegisterNetEvent('QBCore:Client:UpdateObject', function() QBCore = exports['qb-core']:GetCoreObject() end)
-
 PlayerJob = {}
 PlayerGang = {}
 
@@ -61,6 +58,9 @@ RegisterNetEvent('jim-payments:client:Charge', function(data, outside)
 	--Check if player is using /cashregister command
 	if not outside and not onDuty and data.gang == nil then triggerNotify(nil, Loc[Config.Lan].error["not_onduty"], "error") return end
 	local newinputs = {} -- Begin qb-input creation here.
+	if Config.Usebzzz then 
+		TriggerEvent('animations:client:EmoteCommandStart', {'terminal'})
+	end
 	if Config.List then -- If nearby player list is wanted:
 		--Retrieve a list of nearby players from server
 		local p = promise.new() QBCore.Functions.TriggerCallback('jim-payments:MakePlayerList', function(cb) p:resolve(cb) end)
@@ -85,6 +85,7 @@ RegisterNetEvent('jim-payments:client:Charge', function(data, outside)
 	end
 	--Check if image was given when opening the regsiter
 	local img = data.img or ""
+	if not string.find(img, "<") then img = "<center><p><img src="..img.." width=100px></p>" end
 	--Continue adding payment options to qb-input
 	newinputs[#newinputs+1] = { type = 'radio', name = 'billtype', text = Loc[Config.Lan].menu["type"], options = { { value = "cash", text = Loc[Config.Lan].menu["cash"] }, { value = "bank", text = Loc[Config.Lan].menu["card"] } } }
 	newinputs[#newinputs+1] = { type = 'number', isRequired = true, name = 'price', text = Loc[Config.Lan].menu["amount_charge"] }
@@ -96,6 +97,9 @@ RegisterNetEvent('jim-payments:client:Charge', function(data, outside)
 	if dialog then
 		if not dialog.citizen or not dialog.price then return end
 		TriggerServerEvent('jim-payments:server:Charge', dialog.citizen, dialog.price, dialog.billtype, data.img, outside, gang)
+	end
+	if config.Usebzzz then
+		ExecuteCommand("e c")
 	end
 end)
 

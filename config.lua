@@ -13,7 +13,7 @@ Config = {
 	-- Default Job Payment Systems --
 	---------------------------------
 
-	RenewedBanking = false, -- Enable if using Renewed-Banking false if using QB-Management
+	Banking = "qb", -- qb, renewed, and fd currently default supported
 
 	ApGov = true, -- Toggle support for AP-Goverment Tax
 
@@ -37,6 +37,9 @@ Config = {
 		`A_M_Y_Business_03`,
 		`U_F_M_CasinoShop_01`,
 	},
+
+	Usebzzz = false, -- enable if you're using the prop from bzzz
+	Enablecommand = true, -- Enables the cashregister command
 
 	PhoneBank = false, 	-- Set this to false to use the popup payment system FOR CARD/BANK PAYMENTS instead of using phone invoices
 						-- This doesn't affect Cash payments as they by default use confirmation now
