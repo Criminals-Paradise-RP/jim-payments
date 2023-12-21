@@ -24,7 +24,7 @@ Config = {
 	List = true, -- "true" to use nearby player list feature in the cash registers, "false" for manual id entry
 	PaymentRadius = 15, -- This is how far the playerlist will check for nearby players (based on the person charging)
 
-	Peds = true, -- "true" to enable peds spawning in banks
+	Peds = false, -- "true" to enable peds spawning in banks
 	PedPool = {
 		`IG_Bankman`,
 		`U_M_M_BankMan`,
