@@ -24,7 +24,7 @@ Config = {
 	List = true, -- "true" to use nearby player list feature in the cash registers, "false" for manual id entry
 	PaymentRadius = 15, -- This is how far the playerlist will check for nearby players (based on the person charging)
 
-	Peds = false, -- "true" to enable peds spawning in banks
+	Peds = true, -- "true" to enable peds spawning in banks
 	PedPool = {
 		`IG_Bankman`,
 		`U_M_M_BankMan`,
@@ -49,7 +49,7 @@ Config = {
 						-- This doesn't affect Cash payments as they by default use confirmation now
 						-- This is helpful for phones that don't support invoices well
 
-	PhoneType = "qb", -- Change this setting to make invoices work with your phone script [still testing this currently]
+	PhoneType = "qb", 	-- Change this setting to make invoices work with your phone script [still testing this currently]
 						-- "qb" for qb-phone
 						-- "gks"" for GKSPhone
 
@@ -157,9 +157,9 @@ Config = {
 	---------------------
 	-- Banking Systems --
 	---------------------
-	useATM = false, -- Enable this to use the scripts ATM's and controls
-	useBanks = false, -- Enable this to use my banking stuff
-	BankBlips = false, -- Enable this if you disabled qb-banking and need bank locations
+	useATM = true, -- Enable this to use the scripts ATM's and controls
+	useBanks = true, -- Enable this to use my banking stuff
+	BankBlips = true, -- Enable this if you disabled qb-banking and need bank locations
 	ATMBlips = false, -- Enable this if you are a pyscho and need every ATM to be on the map too
 
 	Gabz = false, 	-- "true" to enable Gabz Bank locations
